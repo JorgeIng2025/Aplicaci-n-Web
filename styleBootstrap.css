@@ -1,0 +1,353 @@
+body {
+    background-color: #247158;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fondo blanco transparente */
+    backdrop-filter: blur(10px);
+    /* Difuminado */
+    z-index: 1000;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para efecto de elevación */
+    z-index: 1000;
+}
+
+
+.Titulo {
+    color: #F4FFFC;
+    margin-top: 100px;
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.CTP {
+    overflow: hidden;
+    /* Oculta el contenido que sobrepasa los bordes */
+    /* border-right: .10em solid black; */
+    /* Crea un cursor */
+    /* white-space: nowrap;  */
+    margin: 0 auto;
+    /* Centra el texto horizontalmente */
+    letter-spacing: .10em;
+    /* Espaciado entre letras */
+    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+
+}
+
+/* Animación de escritura */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* Animación del cursor
+@keyframes blink-caret {
+
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black;
+    }
+} */
+
+/* Sidebar lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar hr {
+    height: 4px;
+    border: none;
+    margin: 20px;
+}
+
+/* Cambiar color a texto de sidebar */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    margin-top: 70px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.MenuHorizontal {
+    margin-top: 85px;
+    list-style: none;
+    justify-content: center;
+}
+
+.MenuVertical {
+    display: none;
+    list-style: none;
+}
+
+
+.MenuHorizontal li:hover .MenuVertical {
+    display: block;
+
+}
+
+
+/* Color a botón menú */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #0c0a0a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Función para cuando el usuario pase el mouse sobre el botón menú */
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 5px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+/* Para acomodar el texto del body en Seccion01*/
+.Sec01 {
+    /* En caso de agregar un fondo para la visión y misión, descomentar y agregar fondo que gusten */
+    /* background: #0F2027; */
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    margin-right: 25px;
+    margin-left: 25px;
+    font-size: 18px;
+    color: #F4FFFC;
+    font-size: larger;
+    text-align: justify;
+
+    /* h2 {
+        margin-left: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: white;
+        text-align: justify;
+    } */
+
+    hr {
+        height: 4px;
+        color: #0c0a0a;
+        border: none;
+        width: 100%;
+    }
+
+    h2 {
+        font-family: serif;
+        font-weight: bold;
+        text-align: justify;
+        font-size: 30px;
+        padding: 25px;
+    }
+
+}
+
+
+
+.sec02 h1 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+.sec02 .slider {
+    display: flex;
+    width: 100%;
+    height: 400px;
+
+}
+
+.sec02 .slider img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.sec02 img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.sec02 h1 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+p {
+    margin-left: 30px;
+}
+
+/* Finalizar acomodo del texto del body */
+
+/* #dropdown-Menu ul{
+    color: red;
+} */
+
+.piepagina {
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+}
+
+.grupo1 {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.piepagina .grupo1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+.piepagina .grupo1 .box figure img {
+    width: 250px;
+    border-radius: 8px;
+}
+
+.piepagina .grupo1 .box h2 {
+    color: #F4FFFC;
+    font-family: serif;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.piepagina .grupo1 .box p {
+    font-size: 18px;
+    color: #F4FFFC;
+    margin-left: 0%;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.piepagina .grupo1 .redessociales a {
+    display: inline-block;
+    text-decoration: none;
+    width: 90px;
+    max-height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 5px;
+    background-color: #0d2033;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.piepagina .grupo1 .redessociales .fa-envelope {
+    width: 195px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.piepagina .grupo1 .redessociales .fa-phone {
+    width: 195px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.piepagina .grupo2 {
+    background-color: #1f4b2c;
+    padding: 15px 10px;
+    text-align: center;
+    color: #F4FFFC;
+}
+
+.piepagina .grupo2 .small {
+    font-size: 15px;
+
+}
+
+@media screen and (max-width: 800px) {
+    .grupo1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 0 35px;
+        text-align: center;
+        padding: 25px;
+    }
+}
